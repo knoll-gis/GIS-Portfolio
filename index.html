@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Johnathan Knoll | GIS & Spatial Data Portfolio</title>
+    <title>Johnathan Knoll | GIS &amp; Spatial Data Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="Portfolio of Johnathan Knoll, GIS Technician specializing in local government GIS, automation, workflow design, and geospatial analytics.">
-
+    <meta name="description" content="Portfolio of Johnathan Knoll, GIS Technician II and E-911 Address Coordinator specializing in local government GIS, ArcPy automation, and addressing workflows.">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <header class="site-header">
     <div class="container header-inner">
-        <div class="logo">
+        <a class="logo" href="index.html">
             <span class="logo-mark">JK</span>
             <span class="logo-text">Johnathan Knoll</span>
-        </div>
-        <nav class="main-nav">
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" id="mainNav">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#maps">Interactive Maps</a>
+            <a href="#tools">Web Tools</a>
+            <a href="#training">Training</a>
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -30,20 +30,20 @@
 </header>
 
 <main>
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section id="hero" class="section hero">
         <div class="container hero-inner">
             <div class="hero-text">
-                <p class="eyebrow">Local Government GIS · Automation · Spatial Analytics</p>
-                <h1>Building reliable workflows for real-world GIS operations.</h1>
+                <p class="eyebrow">Local Government GIS · ArcPy Automation · Spatial Analytics</p>
+                <h1>GIS Portfolio</h1>
                 <p class="hero-subtitle">
-                    I create GIS tools, automated workflows, and high-integrity spatial datasets 
-                    that support E911 addressing, street naming, and 
-                    decision-making in county government.
+                    GIS tools, automated ArcPy workflows, and high-integrity spatial datasets
+                    supporting E-911 addressing and street naming in county government.
                 </p>
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="https://github.com/knoll-gis" class="btn ghost" target="_blank" rel="noopener">GitHub ↗</a>
                     <a href="#contact" class="btn ghost">Get in Touch</a>
                 </div>
             </div>
@@ -52,9 +52,9 @@
                 <div class="hero-card">
                     <h2>Focus Areas</h2>
                     <ul>
-                        <li>Addressing & E-911 GIS</li>
-                        <li>Automated GIS Workflows</li>
-                        <li>Data Integrity & QA/QC</li>
+                        <li>Addressing &amp; E-911 GIS</li>
+                        <li>Automated ArcPy Workflows</li>
+                        <li>Data Integrity &amp; QA/QC</li>
                         <li>Street Naming Tools</li>
                     </ul>
                 </div>
@@ -62,83 +62,79 @@
         </div>
     </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <div class="container">
-        <div>
-            <h2>About Me</h2>
-            <p>
-                I'm a GIS Technician II for Guadalupe County, TX, focusing on address management,
-                street naming, land records, and public safety datasets. My work centers on 
-                automating repetitive tasks and building reliable GIS workflows that reduce 
-                errors and speed up operations.
-            </p>
-            <p>
-                I design ArcGIS Pro Tasks, Python toolboxes, and integrated systems that
-                streamline everyday workflows such as address verification, data entry,
-                and street name conflict checks.
-            </p>
-            <p>
-                I graduated from Texas State University in 2024 with a B.S. in Geographic Information
-                Science and a minor in Nature and Heritage Tourism, which grounded me in both the
-                technical side of GIS and how people experience and interact with place.
-            </p>
-        </div>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container two-column">
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    I'm a GIS Technician II and E-911 Address Coordinator for Guadalupe County, TX,
+                    focusing on address management, street naming, land records, and public safety
+                    datasets. My work centers on automating repetitive tasks and building reliable
+                    GIS workflows that reduce errors and speed up operations.
+                </p>
+                <p>
+                    I design ArcGIS Pro Tasks, Python toolboxes, and Excel-integrated systems that
+                    streamline everyday workflows such as address verification, parcel selection,
+                    and street-name conflict checks.
+                </p>
+                <p>
+                    I graduated from Texas State University in 2024 with a B.S. in Geographic
+                    Information Science and a minor in Nature and Heritage Tourism, which grounded me
+                    in both the technical side of GIS and how people experience and interact with place.
+                </p>
+            </div>
 
-        <div>
-            <h3>Strengths</h3>
-            <ul class="key-points">
-                <li>Translating messy real-world workflows into clean GIS tools</li>
-                <li>Automating high-volume processes using Python & ArcPy</li>
-                <li>Designing data integrity rules to prevent bad inputs</li>
-                <li>Working across departments to improve interdepartmental operations</li>
-            </ul>
+            <div class="about-aside">
+                <h3>Strengths</h3>
+                <ul class="key-points">
+                    <li>Translating messy real-world workflows into clean GIS tools</li>
+                    <li>Automating high-volume processes using Python &amp; ArcPy</li>
+                    <li>Designing data validation that prevents bad inputs</li>
+                    <li>Working across departments to improve operations</li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <!-- SKILLS -->
     <section id="skills" class="section section-alt">
         <div class="container">
             <h2>Skills</h2>
-
             <div class="skills-grid">
                 <div class="skill-group">
-                    <h3>GIS & Spatial</h3>
+                    <h3>GIS &amp; Spatial</h3>
                     <ul>
                         <li>ArcGIS Pro / ArcGIS Online</li>
-                        <li>Parcel, Address, & Road Centerline Management</li>
+                        <li>Parcel, Address &amp; Road Centerline Management</li>
                         <li>Topology, QA/QC, Attribute Rules</li>
-                        <li>Cartography & Map Layouts</li>
+                        <li>Cartography &amp; Map Layouts</li>
                     </ul>
                 </div>
-
                 <div class="skill-group">
-                    <h3>Data & Automation</h3>
+                    <h3>Data &amp; Automation</h3>
                     <ul>
                         <li>Python, ArcPy, pandas</li>
-                        <li>ModelBuilder & Task Frameworks</li>
-                        <li>Excel Automation (OpenPyXL, integrated workflows)</li>
-                        <li>Data Validation & Schema Design</li>
+                        <li>ModelBuilder &amp; Task Frameworks</li>
+                        <li>Excel Automation (OpenPyXL)</li>
+                        <li>Data Validation &amp; Schema Design</li>
                     </ul>
                 </div>
-
                 <div class="skill-group">
-                    <h3>Web & Scripting</h3>
+                    <h3>Web &amp; Scripting</h3>
                     <ul>
                         <li>HTML / CSS / JavaScript</li>
-                        <li>Leaflet & Mapbox GL</li>
+                        <li>Leaflet &amp; Mapbox GL</li>
                         <li>ArcGIS API for JavaScript</li>
+                        <li>Survey123 &amp; Field Apps</li>
                     </ul>
                 </div>
-
                 <div class="skill-group">
                     <h3>Domain Expertise</h3>
                     <ul>
-                        <li>Addressing & Street Naming Policy</li>
-                        <li>911 & Emergency Response Datasets</li>
-                        <li>Subdivision & Land Development GIS</li>
+                        <li>Addressing &amp; Street Naming Policy</li>
+                        <li>E-911 &amp; Emergency Response Datasets</li>
+                        <li>Subdivision &amp; Land Development GIS</li>
                     </ul>
                 </div>
             </div>
@@ -149,100 +145,190 @@
     <section id="projects" class="section">
         <div class="container">
             <h2>Projects</h2>
-            <p class="section-intro">
-                A selection of real-world work where I improved GIS operations, automated workflows, 
-                or designed better spatial datasets for county and public safety use.
+            <p class="section-intro intro-white">
+                Real-world work where I improved GIS operations, automated workflows, or designed
+                better spatial datasets for county and public-safety use. Public templates are
+                open-sourced so others can adapt them.
             </p>
 
             <div class="projects-grid">
 
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <h3>Address Verification Workflow Automation</h3>
-                    <p class="project-meta">ArcGIS Pro · Python Toolbox · Excel Integration</p>
-                    <p>
-                        Developed a complete address verification workflow that pulls parcel 
-                        and address point data, checks address history, populates an Excel 
-                        workbook, and generates address verification letters in ArcGIS Pro.
-                    </p>
-                    <p class="project-impact"><strong>Impact:</strong> Reduced manual steps, eliminated
-                        common data-entry errors, and standardized the entire address assignment process.</p>
+                <!-- Project 1: PUBLIC — whole card links to the repo -->
+                <article class="project-card has-link">
+                    <div class="project-cover cover-blue">
+                        <!-- Swap for a screenshot later: <img src="assets/cover-addressing.png" alt="Address verification tool"> -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/>
+                            <path d="m9 10 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">ArcGIS Pro · Python Toolbox · Excel</p>
+                        <h3>Address Verification Workflow Automation</h3>
+                        <p>
+                            A complete address verification workflow that selects parcels, checks
+                            address history, populates an Excel workbook, and generates address
+                            verification letters inside ArcGIS Pro.
+                        </p>
+                        <p class="project-impact"><strong>Impact:</strong> Reduced manual steps,
+                            eliminated common data-entry errors, and standardized the address
+                            assignment process.</p>
+                    </div>
+                    <div class="project-footer">
+                        <a class="repo-link" href="https://github.com/knoll-gis/Addressing-Automation" target="_blank" rel="noopener">View code ↗</a>
+                    </div>
                 </article>
 
-                <!-- Project 2 -->
+                <!-- Project 2: PRIVATE — internal italic note instead of a link -->
                 <article class="project-card">
-                    <h3>Street Name Conflict & Phonetic Matching Tool</h3>
-                    <p class="project-meta">ArcPy · Metaphone · Fuzzy Matching</p>
-                    <p>
-                        Created a street-name conflict detection tool combining substring matching,
-                        Metaphone pronunciation encoding, and fuzzy string scoring to catch sound-alike
-                        names across centerlines and reserved-name datasets.
-                    </p>
-                    <p class="project-impact"><strong>Impact:</strong> Reduced risk of confusing street names, 
-                        improved 911 routing clarity, and increased review consistency.</p>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <h3>Data Integrity Framework for Address Points</h3>
-                    <p class="project-meta">Domains · Attribute Rules · Topology</p>
-                    <p>
-                        Designed a comprehensive set of data integrity rules, domains, and topology checks 
-                        for address points and street centerlines, ensuring accuracy across the address database.
-                    </p>
-                    <p class="project-impact"><strong>Impact:</strong> Shifted QA from reactive to proactive,
-                        preventing invalid inputs at the source.</p>
+                    <div class="project-cover cover-indigo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 2v20"/>
+                            <rect x="6" y="5" width="12" height="4" rx="1"/>
+                            <rect x="8" y="12" width="12" height="4" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">ArcPy · Metaphone · Fuzzy Matching</p>
+                        <h3>Street Name Conflict &amp; Phonetic Matching Tool</h3>
+                        <p>
+                            A street-name conflict detector combining substring matching, Metaphone
+                            pronunciation encoding, and fuzzy string scoring to catch sound-alike
+                            names across centerlines and reserved-name datasets.
+                        </p>
+                        <p class="project-impact"><strong>Impact:</strong> Reduced confusing street
+                            names, improved 911 routing clarity, and increased review consistency.</p>
+                    </div>
+                    <div class="project-footer">
+                        <span class="internal-note">Internal County Implementation</span>
+                    </div>
                 </article>
 
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE MAPS -->
-    <section id="maps" class="section section-alt">
+    <!-- GIS WEB TOOLS -->
+    <section id="tools" class="section section-alt">
         <div class="container">
-            <h2>Interactive Web Maps</h2>
+            <h2>GIS Web Tools</h2>
             <p class="section-intro">
-                Examples of browser-based GIS applications using Leaflet, Mapbox, or ArcGIS Online embeds.
-                These demonstrate my ability to produce web-ready GIS tools.
+                Browser-based GIS work. The interactive map opens on its own full-size page; county
+                applications will link out here once they're publicly published and approved.
             </p>
 
-            <div class="map-showcase-grid">
+            <div class="projects-grid">
 
-                <!-- Map container 1 -->
-                <div class="map-card">
-                    <h3>Leaflet Demo Map</h3>
-                    <p class="project-meta">HTML · JS · Leaflet</p>
-                    <div id="map1" class="map-container"></div>
-                </div>
+                <!-- Tool 1: WORKING — opens the full-size map page -->
+                <article class="project-card has-link">
+                    <div class="project-cover cover-teal">
+                        <!-- Replace with a screenshot of the future symbology map: <img src="assets/thumb-map.png" alt="Interactive map"> -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m9 4 6 2 5-2v14l-5 2-6-2-5 2V4z"/>
+                            <path d="M9 4v14M15 6v14"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Leaflet · Sample data</p>
+                        <h3>Interactive Leaflet Map</h3>
+                        <p>
+                            A browser map demo (sample points only). A custom, symbology-driven map
+                            will replace this demo here.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a class="repo-link" href="map.html">Open full map ↗</a>
+                    </div>
+                </article>
 
-                <!-- Map container 2 -->
-                <div class="map-card">
-                    <h3>ArcGIS Online Embedded Map</h3>
-                    <p class="project-meta">ArcGIS Web App</p>
-                    <iframe 
-                        src="" 
-                        id="agol-embed"
-                        class="map-embed"
-                        allowfullscreen>
-                    </iframe>
-                </div>
+                <!-- Tool 2: pending county approval to link out -->
+                <article class="project-card is-pending">
+                    <div class="project-cover cover-indigo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">ArcGIS Online · Web App</p>
+                        <h3>County GIS Web Application</h3>
+                        <p>
+                            A public-facing county application. When approved, this thumbnail will
+                            link directly to the live app.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <span class="pending-text">Link pending county approval</span>
+                    </div>
+                </article>
+
+                <!-- Tool 3: Survey123 address request form -->
+                <article class="project-card is-pending">
+                    <div class="project-cover cover-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="5" y="3" width="14" height="18" rx="2"/>
+                            <path d="M9 8h6M9 12h6M9 16h4"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Survey123 · Field Intake</p>
+                        <h3>Public Address Request Form</h3>
+                        <p>
+                            A Survey123 intake form for address requests. A walkthrough or read-only
+                            demo will link here to avoid live public submissions.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <span class="pending-text">Demo link pending</span>
+                    </div>
+                </article>
 
             </div>
+        </div>
+    </section>
+
+    <!-- TRAINING -->
+    <!-- Scaffolded section: keep ONLY the courses you actually completed; edit titles/years. -->
+    <section id="training" class="section">
+        <div class="container">
+            <h2>Training &amp; Esri Courses</h2>
+            <p class="section-intro">
+                Instructor-led Esri training I've completed to deepen my GIS and data-management foundation.
+            </p>
+            <ul class="course-list">
+                <li>
+                    <span class="course-name">ArcGIS Pro: Essential Workflows</span>
+                    <span class="course-meta">Esri · Instructor-led</span>
+                </li>
+                <li>
+                    <span class="course-name">Creating and Editing Data with Attribute Rules</span>
+                    <span class="course-meta">Esri · Instructor-led</span>
+                </li>
+                <li>
+                    <span class="course-name">Python Scripting for Geoprocessing Workflows</span>
+                    <span class="course-meta">Esri · Instructor-led</span>
+                </li>
+                <li>
+                    <span class="course-name">Cartographic Design Using ArcGIS Pro</span>
+                    <span class="course-meta">Esri · Instructor-led</span>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- RESUME -->
-    <section id="resume" class="section">
+    <section id="resume" class="section section-alt">
         <div class="container">
             <h2>Resume</h2>
             <p class="section-intro">Download my full resume below.</p>
-            <a href="resume.pdf" class="btn primary" download>Download Resume (PDF)</a>
+            <div class="resume-actions">
+                <a href="resume.pdf" class="btn primary" download>Download Resume (PDF)</a>
+            </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
             <p class="section-intro">Feel free to reach out for GIS roles, workflow design, or collaboration.</p>
@@ -252,12 +338,14 @@
                     <h3>Email</h3>
                     <p><a href="mailto:johnathanknoll02@gmail.com">johnathanknoll02@gmail.com</a></p>
                 </div>
-
                 <div>
                     <h3>LinkedIn</h3>
-                    <p><a href="www.linkedin.com/in/johnathan-knoll" target="_blank">LinkedIn Profile</a></p>
+                    <p><a href="https://www.linkedin.com/in/johnathan-knoll" target="_blank" rel="noopener">johnathan-knoll</a></p>
                 </div>
-
+                <div>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/knoll-gis" target="_blank" rel="noopener">knoll-gis</a></p>
+                </div>
             </div>
         </div>
     </section>
