@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Demo Map | Johnathan Knoll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Full-screen interactive demo map (sample data) by Johnathan Knoll.">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Page-specific layout: slim header + map that fills the rest of the viewport */
+        body { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+        .map-page-header {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 1rem; padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid var(--border-subtle);
+            background: rgba(5,6,10,0.92);
+        }
+        .map-page-header h1 { font-size: 1.05rem; margin: 0; font-weight: 600; }
+        .map-page-header .note {
+            font-size: 0.78rem; color: var(--muted);
+        }
+        #bigmap { flex: 1; width: 100%; }
+        .back-link {
+            color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 600;
+            white-space: nowrap;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+
+<body>
+    <header class="map-page-header">
+        <a class="back-link" href="index.html">&#8592; Back to portfolio</a>
+        <h1>Interactive Demo Map</h1>
+        <span class="note">Sample data only &middot; not live county data</span>
+    </header>
+
+    <div id="bigmap"></div>
+
+    <!-- Leaflet library + map init -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        /* Full-screen demo map: free OSM tiles + a few SAMPLE points over
+           Guadalupe County. Placeholder for a future custom symbology map. */
+        var map = L.map("bigmap").setView([29.5688, -97.9647], 11); // Seguin, TX
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: "&copy; OpenStreetMap contributors"
+        }).addTo(map);
+
+        // Sample address points for demonstration only.
+        var samplePoints = [
+            { coords: [29.5688, -97.9647], label: "Sample address point — Seguin" },
+            { coords: [29.6280, -98.1170], label: "Sample address point — Cibolo" },
+            { coords: [29.5630, -98.0250], label: "Sample address point — McQueeney" }
+        ];
+
+        samplePoints.forEach(function (pt) {
+            L.marker(pt.coords).addTo(map).bindPopup(pt.label);
+        });
+    </script>
+</body>
+</html>
