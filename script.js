@@ -14,23 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
     var modalVideo = document.getElementById("modalVideo");
     var lastFocused = null;
 
-    // Load the chosen video, lock scrolling, and autoplay (muted) unless the
-    // visitor prefers reduced motion.
+    var modalVideo = document.getElementById("modalVideo");
+    var lastFocused = null;
+
+    // Load the chosen video, lock scrolling, and show the poster as the preview
+    // frame. We set the poster before the src so it paints immediately, and we
+    // don't autoplay — autoplay replaces the poster with the first video frame,
+    // so the visitor presses play when ready.
     function openVideoModal(src, poster) {
         if (!videoModal || !modalVideo || !src) return;
-        modalVideo.src = src;
         if (poster) { modalVideo.setAttribute("poster", poster); }
+        else { modalVideo.removeAttribute("poster"); }
+        modalVideo.src = src;
         lastFocused = document.activeElement;
         videoModal.hidden = false;
         document.body.classList.add("modal-open");
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            modalVideo.muted = true;
-            modalVideo.play().catch(function () {});
-        }
         var closeBtn = videoModal.querySelector(".video-modal-close");
         if (closeBtn) { closeBtn.focus(); }
     }
-
+   
     // Pause, unload buffered data, restore scrolling, and return focus.
     function closeVideoModal() {
         if (!videoModal || !modalVideo) return;
