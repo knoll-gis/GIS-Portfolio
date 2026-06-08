@@ -20,8 +20,7 @@
             <a href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#tools">Web Tools</a>
+            <a href="#work">Work</a>
             <a href="#training">Training</a>
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
@@ -44,7 +43,7 @@
                 </p>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#work" class="btn primary">View Work</a>
                     <a href="https://github.com/knoll-gis" class="btn ghost" target="_blank" rel="noopener">GitHub ↗</a>
                     <a href="#contact" class="btn ghost">Get in Touch</a>
                 </div>
@@ -143,20 +142,22 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+    <!-- WORK (merged Projects + Web Tools) -->
+    <section id="work" class="section">
         <div class="container">
-            <h2>Projects</h2>
+            <h2>Selected Work</h2>
             <p class="section-intro intro-white">
-                Real-world work where I improved GIS operations, automated workflows, or designed
-                better spatial datasets for interdepartmental and public-safety use.
+                GIS automation, web tools, and field workflows from my county role, ordered by
+                what I lean on most. Some open to source code, some to a live demo, and some are
+                internal county tools I can walk through on request.
             </p>
 
             <div class="projects-grid">
 
-                <!-- Project 1: PUBLIC — whole card links to the repo -->
-                <article class="project-card has-link">
+                <!-- 1. PUBLIC repo — Python automation (headline) -->
+                <article class="project-card">
                     <div class="project-cover cover-blue">
+                        <span class="card-tag">Python Automation</span>
                         <!-- Swap for a screenshot later: <img src="assets/cover-addressing.png" alt="Address verification tool"> -->
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/>
@@ -176,13 +177,14 @@
                             assignment process.</p>
                     </div>
                     <div class="project-footer">
-                        <a class="repo-link" href="https://github.com/knoll-gis/Addressing-Automation" target="_blank" rel="noopener">View code ↗</a>
+                        <a class="card-btn primary" href="https://github.com/knoll-gis/Addressing-Automation" target="_blank" rel="noopener">View code ↗</a>
                     </div>
                 </article>
 
-                <!-- Project 2: PRIVATE — internal italic note instead of a link -->
+                <!-- 2. PRIVATE — Python automation, internal note -->
                 <article class="project-card">
                     <div class="project-cover cover-indigo">
+                        <span class="card-tag">Python Automation</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M12 2v20"/>
                             <rect x="6" y="5" width="12" height="4" rx="1"/>
@@ -201,50 +203,14 @@
                             names, improved 911 routing clarity, and increased review consistency.</p>
                     </div>
                     <div class="project-footer">
-                        <span class="internal-note">Internal County Implementation</span>
+                        <span class="internal-note">Internal county tool — available to walk through on request</span>
                     </div>
                 </article>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- GIS WEB TOOLS -->
-    <section id="tools" class="section section-alt">
-        <div class="container">
-            <h2>GIS Web Tools</h2>
-            <p class="section-intro">
-                Browser-based GIS work. The interactive map opens on its own full-size page; the 
-                County GIS Web Application is not yet publicaly accessible.
-            </p>
-
-            <div class="projects-grid">
-
-                <!-- Tool 1: WORKING — opens the full-size map page -->
-                <article class="project-card has-link">
-                    <div class="project-cover cover-teal">
-                        <!-- Replace with a screenshot of the future symbology map: <img src="assets/thumb-map.png" alt="Interactive map"> -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="m9 4 6 2 5-2v14l-5 2-6-2-5 2V4z"/>
-                            <path d="M9 4v14M15 6v14"/>
-                        </svg>
-                    </div>
-                    <div class="project-body">
-                        <p class="project-meta">Leaflet · Sample data</p>
-                        <h3>Interactive Leaflet Map</h3>
-                        <p>
-                            A browser map demo (sample points only). A custom, symbology-driven map
-                            will replace this demo here.
-                        </p>
-                    </div>
-                    <div class="project-footer">
-                        <a class="repo-link" href="map.html">Open full map ↗</a>
-                    </div>
-                </article>
-
-                <!-- Tool 2: pending county approval to link out -->
+                <!-- 3. Web GIS — county app, link pending approval -->
                 <article class="project-card is-pending">
-                    <div class="project-cover cover-indigo">
+                    <div class="project-cover cover-teal">
+                        <span class="card-tag">Web GIS</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <circle cx="12" cy="12" r="9"/>
                             <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/>
@@ -254,8 +220,8 @@
                         <p class="project-meta">ArcGIS Online · Web App</p>
                         <h3>County GIS Web Application</h3>
                         <p>
-                            A public-facing county application. When approved, this thumbnail will
-                            link directly to the live app.
+                            A public-facing county application. Once approved, this card will link
+                            directly to the live app.
                         </p>
                     </div>
                     <div class="project-footer">
@@ -263,9 +229,10 @@
                     </div>
                 </article>
 
-                <!-- Tool 3: Survey123 address request form -->
+                <!-- 4. Field GIS — Survey123, demo video pending -->
                 <article class="project-card is-pending">
                     <div class="project-cover cover-blue">
+                        <span class="card-tag">Field GIS</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <rect x="5" y="3" width="14" height="18" rx="2"/>
                             <path d="M9 8h6M9 12h6M9 16h4"/>
@@ -275,11 +242,37 @@
                         <p class="project-meta">Survey123 · Field Intake</p>
                         <h3>Public Address Request Form</h3>
                         <p>
-                            A Survey123 intake form for address requests.
+                            A Survey123 intake form for new address requests. A short demo video
+                            (sample data only) will show the workflow here.
                         </p>
                     </div>
                     <div class="project-footer">
-                        <span class="pending-text">Pending demo video</span>
+                        <span class="pending-text">Demo video coming soon</span>
+                    </div>
+                </article>
+
+                <!-- 5. Cartography — interactive bonus hosted on this site -->
+                <article class="project-card">
+                    <div class="project-cover cover-teal">
+                        <span class="card-tag">Cartography · Bonus</span>
+                        <!-- Replace with a screenshot of the finished symbology map: <img src="assets/thumb-map.png" alt="Interactive map"> -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="m9 4 6 2 5-2v14l-5 2-6-2-5 2V4z"/>
+                            <path d="M9 4v14M15 6v14"/>
+                        </svg>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-meta">Leaflet · Custom Symbology</p>
+                        <h3>Interactive Map</h3>
+                        <p>
+                            A self-built interactive map focused on custom symbology and design,
+                            running right here on the site with no external link. Built on clean,
+                            public data so the cartography does the talking.
+                        </p>
+                    </div>
+                    <div class="project-footer">
+                        <a class="card-btn" href="map.html">Open map ↗</a>
+                        <span class="pending-text">In progress</span>
                     </div>
                 </article>
 
@@ -305,7 +298,7 @@
                     <span class="course-meta">Esri · Instructor-led</span>
                 </li>
                 <li>
-                    <span class="course-name">Managign Geospatial Data in ArcGIS</span>
+                    <span class="course-name">Managing Geospatial Data in ArcGIS</span>
                     <span class="course-meta">Esri · Instructor-led</span>
                 </li>
             </ul>
