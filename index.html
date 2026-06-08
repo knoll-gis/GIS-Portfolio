@@ -247,7 +247,10 @@
                         </p>
                     </div>
                     <div class="project-footer">
-                        <span class="pending-text">Demo video coming soon</span>
+                    <button class="card-btn" type="button"
+                        data-video="assets/survey123-demo.mp4"
+                        data-poster="assets/survey123-poster.png"
+                        aria-haspopup="dialog">Watch demo ▶</button>
                     </div>
                 </article>
 
@@ -348,6 +351,17 @@
     </div>
 </footer>
 
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Survey123 demo video" hidden>
+    <div class="video-modal-backdrop" data-close></div>
+    <div class="video-modal-inner">
+        <button class="video-modal-close" type="button" aria-label="Close video" data-close>✕</button>
+        <video id="modalVideo" controls playsinline preload="none">
+            Your browser doesn&rsquo;t support embedded video.
+        </video>
+        <p class="video-modal-note">Sample data only &middot; not live county data</p>
+    </div>
+        
+</div>
 <script src="script.js"></script>
 
 </body>
