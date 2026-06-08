@@ -198,6 +198,32 @@ body {
 .skill-group h3 { margin: 0 0 0.75rem; font-size: 1rem; }
 .skill-group ul { padding-left: 1.2rem; margin: 0; color: var(--muted); font-size: 0.9rem; }
 
+/* Demo video lightbox */
+.video-modal { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1.25rem; }
+.video-modal[hidden] { display: none; }
+.video-modal-backdrop { position: absolute; inset: 0; background: rgba(2,3,8,0.82); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.video-modal-inner {
+    position: relative; z-index: 1;
+    width: 100%; max-width: 900px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 0.75rem;
+}
+.video-modal-inner video { width: 100%; height: auto; max-height: 75vh; display: block; background: #000; border-radius: var(--radius-md); }
+.video-modal-close {
+    position: absolute; top: 1rem; right: 1rem; z-index: 2;
+    width: 40px; height: 40px; border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    background: rgba(5,6,10,0.85); color: var(--fg);
+    font-size: 1rem; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+}
+.video-modal-close:hover { background: var(--accent-soft); border-color: var(--accent); }
+.video-modal-note { text-align: center; color: var(--muted); font-size: 0.8rem; font-style: italic; margin: 0.6rem 0 0.2rem; }
+body.modal-open { overflow: hidden; }
+
 /* Cover cards (shared by Projects + Web Tools) */
 
 .projects-grid {
