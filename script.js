@@ -14,23 +14,49 @@ document.addEventListener("DOMContentLoaded", function () {
     var modalVideo = document.getElementById("modalVideo");
     var lastFocused = null;
 
-    var modalVideo = document.getElementById("modalVideo");
-    var lastFocused = null;
-
-    // Load the chosen video, lock scrolling, and show the poster as the preview
-    // frame. We set the poster before the src so it paints immediately, and we
-    // don't autoplay — autoplay replaces the poster with the first video frame,
-    // so the visitor presses play when ready.
+    // Load the chosen video, lock scrolling, and autoplay (muted) unless the
+    // visitor prefers reduced motion.
     function openVideoModal(src, poster) {
         if (!videoModal || !modalVideo || !src) return;
-        if (poster) { modalVideo.setAttribute("poster", poster); }
-        else { modalVideo.removeAttribute("poster"); }
         modalVideo.src = src;
+        if (poster) { modalVideo.setAttribute("poster", poster); }
         lastFocused = document.activeElement;
         videoModal.hidden = false;
         document.body.classList.add("modal-open");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            modalVideo.muted = true;
+            modalVideo.play().catch(function () {});
+        }
         var closeBtn = videoModal.querySelector(".video-modal-close");
         if (closeBtn) { closeBtn.focus(); }
+    }
+
+    // Pause, unload buffered data, restore scrolling, and return focus.
+    function closeVideoModal() {
+        if (!videoModal || !modalVideo) return;
+        modalVideo.pause();
+        modalVideo.removeAttribute("src");
+        modalVideo.load();
+        videoModal.hidden = true;
+        document.body.classList.remove("modal-open");
+        if (lastFocused) { lastFocused.focus(); }
+    }
+
+    // Wire each card button to its own video.
+    document.querySelectorAll("[data-video]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            openVideoModal(btn.getAttribute("data-video"), btn.getAttribute("data-poster"));
+        });
+    });
+
+    // Backdrop / close-button clicks (anything with data-close) and Escape.
+    if (videoModal) {
+        videoModal.addEventListener("click", function (event) {
+            if (event.target.hasAttribute("data-close")) { closeVideoModal(); }
+        });
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && !videoModal.hidden) { closeVideoModal(); }
+        });
     }
    
     // Pause, unload buffered data, restore scrolling, and return focus.
